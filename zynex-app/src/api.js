@@ -1,4 +1,4 @@
-const API_BASE = "https://miniature-fishstick-4qq5x97jpgrvf5w-8000.app.github.dev";
+const API_BASE = "https://vertex-backend-p2h3.onrender.com";
 
 export async function fetchTeam() {
   const res = await fetch(`${API_BASE}/team/`);
