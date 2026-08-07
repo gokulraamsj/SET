@@ -6,7 +6,9 @@ app = FastAPI(title="Vertex Backend API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "https://set-91q0ck2y0-gr25.vercel.app",
+    ],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
