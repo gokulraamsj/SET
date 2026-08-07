@@ -1,0 +1,125 @@
+.contact {
+  background: #0a0f0a;
+  padding: 80px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact__left h2 {
+  font-family: "Orbitron", sans-serif;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.contact__left p {
+  color: #999;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.contact__info {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 24px;
+  color: #22c55e;
+}
+
+.contact__info-label {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+.contact__info p {
+  color: #ccc;
+  font-size: 0.85rem;
+  margin: 2px 0;
+}
+
+.contact__form {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact__form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact__field label {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: #888;
+}
+
+.contact__field input,
+.contact__field textarea {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 0.85rem;
+  outline: none;
+  resize: none;
+  font-family: inherit;
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus {
+  border-color: #22c55e;
+}
+
+.contact__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #4ade80, #22c55e, #16a34a);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.contact__submit:hover {
+  filter: brightness(1.15);
+}
+
+@media (max-width: 900px) {
+  .contact { grid-template-columns: 1fr; padding: 60px 24px; }
+  .contact__form-row { grid-template-columns: 1fr; }
+}
+.contact__status {
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.contact__status--ok {
+  color: #4ade80;
+}
+
+.contact__status--err {
+  color: #f87171;
+}

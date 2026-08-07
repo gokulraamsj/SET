@@ -1,0 +1,124 @@
+.hero {
+  position: relative;
+  min-height: clamp(600px, 90vh, 850px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: transparent;
+  overflow: hidden;
+  padding: 100px 20px 0;
+}
+
+.hero__logo-mark {
+  background: linear-gradient(135deg, #4ade80, #22c55e, #16a34a, #4ade80);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero__title {
+  font-family: "Audiowide", "Orbitron", sans-serif;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  letter-spacing: clamp(8px, 1.5vw, 16px);
+  color: #e5e5e5;
+  z-index: 1;
+  margin-bottom: 60px;
+  text-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+}
+.hero__label {
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  color: #aaa;
+  z-index: 1;
+}
+.hero__sublabel {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #4ade80, #22c55e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 8px 0 30px;
+  z-index: 1;
+}
+.hero__logo-mark,
+.hero__title,
+.hero__label,
+.hero__sublabel,
+.hero__actions {
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.hero__title { animation-delay: 0.1s; }
+.hero__label { animation-delay: 0.2s; }
+.hero__sublabel { animation-delay: 0.3s; }
+.hero__actions { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero__glow {
+  position: absolute;
+  top: 20%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.3), transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}.hero__actions {
+  display: flex;
+  gap: 16px;
+  z-index: 1;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero__btn {
+  padding: 14px 32px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.hero__logo-mark {
+  font-family: "Audiowide", "Orbitron", sans-serif;
+  font-size: clamp(3rem, 5vw, 6rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #4ade80, #22c55e, #16a34a, #4ade80);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 4s ease infinite;
+  z-index: 1;
+  margin-bottom: 6px;
+  filter: drop-shadow(0 0 15px rgba(34, 197, 94, 0.5));
+}
+
+.hero__title {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  letter-spacing: clamp(8px, 1.5vw, 16px);
+}
+
+.hero__sublabel {
+  font-size: clamp(1.1rem, 1.6vw, 1.6rem);
+}

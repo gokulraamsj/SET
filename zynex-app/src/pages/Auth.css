@@ -1,0 +1,115 @@
+.auth {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px 40px;
+  background: transparent;
+}
+
+.auth__card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth__title {
+  font-family: "Orbitron", sans-serif;
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth__toggle {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.auth__toggle-btn {
+  flex: 1;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  color: #999;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.auth__toggle-btn.active {
+  background: linear-gradient(90deg, #4ade80, #22c55e);
+  color: #0a0f0a;
+}
+
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth__form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.auth__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth__field label {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: #888;
+}
+
+.auth__field input {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.auth__field input:focus {
+  border-color: #22c55e;
+}
+
+.auth__error {
+  color: #f87171;
+  font-size: 0.8rem;
+}
+
+.auth__submit {
+  background: linear-gradient(90deg, #4ade80, #22c55e, #16a34a);
+  color: #0a0f0a;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.auth__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.auth__success {
+  color: #4ade80;
+  font-size: 0.8rem;
+}

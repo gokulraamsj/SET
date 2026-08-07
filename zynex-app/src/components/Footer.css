@@ -1,0 +1,75 @@
+.footer {
+  background: rgba(5, 8, 5, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 60px 60px 20px;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.footer__logo {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  background: linear-gradient(90deg, #4ade80, #22c55e, #16a34a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.footer__brand p {
+  color: #888;
+  font-size: 0.8rem;
+  margin: 12px 0 16px;
+  line-height: 1.6;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 14px;
+  color: #999;
+  font-size: 1rem;
+}
+
+.footer__col h4 {
+  color: #fff;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.footer__col a,
+.footer__col p {
+  display: block;
+  color: #888;
+  font-size: 0.8rem;
+  text-decoration: none;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.footer__col a:hover {
+  color: #22c55e;
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .footer { padding: 40px 24px 20px; }
+  .footer__top { grid-template-columns: 1fr; gap: 30px; }
+  .footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
+}

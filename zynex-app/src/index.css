@@ -1,0 +1,14 @@
+:root {
+  --bg-primary: #0a0f0a;
+  --bg-secondary: #050805;
+  --accent-1: #4ade80;   /* light green */
+  --accent-2: #22c55e;   /* mid green */
+  --accent-3: #16a34a;   /* deep green */
+  --accent-gradient: linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-3));
+  --glow-color: rgba(34, 197, 94, 0.25);
+  --text-muted: #8a9a8a;
+}
+
+html {
+  font-size: clamp(16px, 1.2vw + 10px, 22px);
+}

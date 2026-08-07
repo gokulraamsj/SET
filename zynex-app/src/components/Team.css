@@ -1,0 +1,136 @@
+.team {
+  background: transparent;
+  padding: 100px 60px;
+  text-align: center;
+}
+
+.team__label {
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.team__heading {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: #fff;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.team-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 32px 20px;
+  text-align: center;
+  transform: rotate(0.75deg);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:nth-child(even) {
+  transform: rotate(-0.75deg);
+}
+
+.team-card:hover {
+  transform: rotate(0deg) translateY(-8px) scale(1.03);
+  border-color: #22c55e;
+  box-shadow: 0 15px 35px rgba(34, 197, 94, 0.25);
+}
+
+.team-card__avatar {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #0a0f0a;
+  background: linear-gradient(135deg, #4ade80, #22c55e, #16a34a);
+}
+
+.team-card__name {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.team-card__role {
+  display: inline-block;
+  color: #4ade80;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.team-card__icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.team-card__icons svg {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.team-card__icons svg:hover {
+  color: #4ade80;
+}
+
+@media (max-width: 900px) {
+  .team { padding: 60px 24px; }
+  .team__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .team__grid { grid-template-columns: 1fr; }
+}
+.team__status {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.team-group {
+  margin-bottom: 60px;
+}
+
+.team-group:last-child {
+  margin-bottom: 0;
+}
+
+.team-group__title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.1rem;
+  color: #4ade80;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.team-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
