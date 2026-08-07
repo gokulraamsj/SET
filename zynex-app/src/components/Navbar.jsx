@@ -4,7 +4,7 @@ import { FiBell, FiMenu, FiX } from "react-icons/fi";
 import { useAuth } from "../AuthContext";
 import { fetchNotifications } from "../api";
 import "./Navbar.css";
-import logo from "../assets/vertex-logo.png";
+import logo from "../assets/vertex-logo.jpeg";
 
 const navLinks = ["Home", "About", "Team", "Events", "Internships", "Contact"];
 
