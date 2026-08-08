@@ -125,6 +125,7 @@
   .navbar__links li {
     z-index: 2000;
     position: relative;
+    touch-action: manipulation;
   }
   .navbar__burger { display: block; }
   .btn--outline { display: none; }
