@@ -108,31 +108,39 @@
 
 @media (max-width: 900px) {
   .navbar { padding: 16px 24px; }
-  .navbar__links {
-    position: fixed;
-    top: 64px;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    background: rgba(10, 10, 10, 0.97);
-    padding: 24px;
-    gap: 20px;
-    transform: translateY(-150%);
-    transition: transform 0.3s ease;
-    z-index: 2000;
+
+  .navbar__links--desktop {
+    display: none;
   }
-  .navbar__links--open {
-    transform: translateY(0);
-    z-index: 2000;
-    isolation: isolate;
-  }
-  .navbar__links li {
-    z-index: 2000;
-    position: relative;
-    touch-action: manipulation;
-  }
+
   .navbar__burger { display: block; }
   .btn--outline { display: none; }
+}
+
+.navbar__mobile-select-wrap {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  padding: 16px 24px;
+  background: rgba(10, 10, 10, 0.97);
+  z-index: 2000;
+}
+
+.navbar__mobile-select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.navbar__mobile-select option {
+  background: #0a0a0a;
+  color: #fff;
 }
 .btn {
   border-radius: 999px;
