@@ -54,16 +54,25 @@ export default function Navbar() {
   };
 
   const scrollToSection = (id) => {
-    if (window.location.pathname !== "/") {
-      navigate("/");
-      setTimeout(() => {
-        document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-    } else {
-      document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
+  const targetId = id.toLowerCase();
+
+  const tryScroll = (attempts = 0) => {
+    const el = document.getElementById(targetId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    } else if (attempts < 20) {
+      setTimeout(() => tryScroll(attempts + 1), 100);
     }
-    setMenuOpen(false);
   };
+
+  if (window.location.pathname !== "/") {
+    navigate("/");
+    setTimeout(() => tryScroll(), 150);
+  } else {
+    tryScroll();
+  }
+  setMenuOpen(false);
+};
 
   return (
     <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
