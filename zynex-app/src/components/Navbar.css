@@ -45,6 +45,9 @@
   cursor: pointer;
   transition: color 0.2s ease;
   position: relative;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .navbar__links li:hover {
