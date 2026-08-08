@@ -116,8 +116,16 @@
     gap: 20px;
     transform: translateY(-150%);
     transition: transform 0.3s ease;
+    z-index: 2000;
   }
-  .navbar__links--open { transform: translateY(0); }
+  .navbar__links--open {
+    transform: translateY(0);
+    z-index: 2000;
+  }
+  .navbar__links li {
+    z-index: 2000;
+    position: relative;
+  }
   .navbar__burger { display: block; }
   .btn--outline { display: none; }
 }
