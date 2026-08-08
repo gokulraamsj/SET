@@ -73,13 +73,13 @@
 }
 .hero__glow {
   position: absolute;
-  top: 20%;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(34, 197, 94, 0.3), transparent 70%);
-  filter: blur(80px);
+  top: 30%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.25), transparent 70%);
+  filter: blur(60px);
   z-index: 0;
-  animation: pulse 4s ease-in-out infinite;
+  pointer-events: none;
 }
 
 @keyframes pulse {

@@ -124,6 +124,7 @@
   .navbar__links--open {
     transform: translateY(0);
     z-index: 2000;
+    isolation: isolate;
   }
   .navbar__links li {
     z-index: 2000;
