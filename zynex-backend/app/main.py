@@ -7,7 +7,7 @@ app = FastAPI(title="Vertex Backend API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://set-91q0ck2y0-gr25.vercel.app",
+        "https://set-ten-mocha.vercel.app",
     ],
     allow_credentials=False,
     allow_methods=["*"],
