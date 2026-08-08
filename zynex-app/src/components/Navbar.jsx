@@ -82,16 +82,11 @@ export default function Navbar() {
 
       <ul className={`navbar__links ${menuOpen ? "navbar__links--open" : ""}`}>
   {navLinks.map((link) => (
-   <li
-  key={link}
-  onClick={() => scrollToSection(link)}
-  onTouchEnd={(e) => {
-    e.preventDefault();
-    scrollToSection(link);
-  }}
->
-  {link}
-</li>
+    <li key={link}>
+      <button className="navbar__link-btn" onClick={() => scrollToSection(link)}>
+        {link}
+      </button>
+    </li>
   ))}
 </ul>
       <div className="navbar__actions">

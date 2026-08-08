@@ -131,6 +131,18 @@
     position: relative;
     touch-action: manipulation;
   }
+  .navbar__link-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+}
   .navbar__burger { display: block; }
   .btn--outline { display: none; }
 }
