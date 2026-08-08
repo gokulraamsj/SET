@@ -80,37 +80,13 @@ export default function Navbar() {
   <span className="navbar__logo-text">VERTEX</span>
 </div>
 
-      <ul className="navbar__links navbar__links--desktop">
+      <ul className={`navbar__links ${menuOpen ? "navbar__links--open" : ""}`}>
   {navLinks.map((link) => (
     <li key={link} onClick={() => scrollToSection(link)}>
       {link}
     </li>
   ))}
 </ul>
-
-{menuOpen && (
-  <div className="navbar__mobile-select-wrap">
-    <select
-      className="navbar__mobile-select"
-      defaultValue=""
-      onChange={(e) => {
-        if (e.target.value) {
-          scrollToSection(e.target.value);
-          e.target.value = "";
-        }
-      }}
-    >
-      <option value="" disabled>
-        Choose a page...
-      </option>
-      {navLinks.map((link) => (
-        <option key={link} value={link}>
-          {link}
-        </option>
-      ))}
-    </select>
-  </div>
-)}
       <div className="navbar__actions">
         <div className="navbar__notif" ref={notifRef}>
           <div className="navbar__icon-wrap" onClick={toggleNotifications}>
