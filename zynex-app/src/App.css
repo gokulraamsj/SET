@@ -28,7 +28,7 @@ body {
   pointer-events: none;
 }
 
-.app > * {
+.app > *:not(nav) {
   position: relative;
   z-index: 1;
 }

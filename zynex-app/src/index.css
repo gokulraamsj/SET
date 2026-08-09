@@ -12,3 +12,6 @@
 html {
   font-size: clamp(16px, 1.2vw + 10px, 22px);
 }
+html {
+  scroll-behavior: smooth;
+}
